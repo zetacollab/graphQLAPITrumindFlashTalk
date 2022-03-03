@@ -1,0 +1,42 @@
+type Author {
+	id: ID!
+	name: String!
+	age: Int
+	shortDesciption: String
+	location: String
+	telephoneNumber: Int
+	emailId: String
+	averageRatings: Int
+	interestAreas: String
+	universityName: String
+	yearOfExperience: Int
+	organisationName: String
+	designation: String
+	noOfShortCourses: Int
+	noOfLongCourses: Int
+	noOfTalks: Int
+	noOfFiveStarRatings: Int 
+	
+}
+# Root
+type Query {
+	findAllAuthors: [Author]!
+	countAuthors: Long!
+}
+# Root
+type Mutation {
+	createAuthor(name: String!, age: Int,shortDesciption: String,
+	location: String,
+	telephoneNumber: Int,
+	emailId: String,
+	averageRatings: Int,
+	interestAreas: String,
+	universityName: String,
+	yearOfExperience: Int,
+	organisationName: String,
+	designation: String,
+	noOfShortCourses: Int,
+	noOfLongCourses: Int,
+	noOfTalks: Int,
+	noOfFiveStarRatings: Int ): Author!
+}
